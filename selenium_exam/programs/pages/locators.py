@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
-#class MainPageLocators():
-#    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+class MainPageLocators():
+     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     
 class LoginPageLocators(): 
     #login_url = (By.XPATH, "//*[@id='login_link']")

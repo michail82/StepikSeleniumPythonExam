@@ -1,5 +1,6 @@
 from .base_page import BasePage
 from .locators import LoginPageLocators
+from .locators import MainPageLocators
 
 class LoginPage(BasePage):
     
@@ -21,4 +22,8 @@ class LoginPage(BasePage):
         # реализуйте проверку, что есть форма регистрации на странице
         # assert True 
         
+    # def go_to_login_page(self):
+    #     link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+    #     link.click()
+    #     return LoginPage(browser=self.browser, url=self.browser.current_url) 
     
