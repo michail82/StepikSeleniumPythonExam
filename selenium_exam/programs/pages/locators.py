@@ -22,3 +22,4 @@ class ProductPageLocators(object):
     MESSAGE_BASKET_TOTAL = (By.CSS_SELECTOR, ".alert-info .alertinner strong")
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     #
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
