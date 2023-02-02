@@ -37,6 +37,16 @@ class ProductPage(BasePage):
     
     #11111111111111111111111111111111111111111111111 Staren 4_3_6
 
+    # def should_not_be_success_message(self):
+    #     assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+    #        "Success message is presented, but should not be"
+
+    # def should_be_disappeare_element(self):
+    #     assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+    #        "Success message is presented, but should not be"
+    
+#22222222222222222222222222222222222222222222222222222222222222
+
     def should_not_be_success_message(self):
         assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
            "Success message is presented, but should not be"
@@ -44,4 +54,3 @@ class ProductPage(BasePage):
     def should_be_disappeare_element(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
            "Success message is presented, but should not be"
-    

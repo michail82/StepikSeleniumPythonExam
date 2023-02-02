@@ -1,4 +1,4 @@
-from .base_page import BasePage
+from .main_page import BasePage
 from selenium.webdriver.common.by import By
 from .locators import MainPageLocators
 from .login_page import LoginPage
@@ -16,3 +16,8 @@ class MainPage(BasePage):
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
         #return LoginPage(browser=self.browser, url=self.browser.current_url)
+
+#22222222222222222222222222222222222222222222222222
+    
+class MainPage(BasePage):
+    pass

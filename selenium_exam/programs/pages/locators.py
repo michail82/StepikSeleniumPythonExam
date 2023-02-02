@@ -23,3 +23,14 @@ class ProductPageLocators(object):
     PRODUCT_PRICE = (By.CSS_SELECTOR, ".product_main .price_color")
     #
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
+ 
+ #222222222222222222222222222222222222222222222222222222
+    
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link") 
+    BUTTON_ADD_TO_BASKET = (By.XPATH, "//*[@id='add_to_basket_form']/button")
+    WRITING_EMPTY_BASKET=(By.XPATH, "//p[text()='Ваша корзина пуста']")
+    # Нажать кнопку перехода в карзину 
+    BUTTON_VIEW_TO_BASKET = (By.XPATH, "//*[@id='default']/header/div[1]/div/div[2]/span/a")
+   

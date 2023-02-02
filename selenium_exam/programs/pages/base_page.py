@@ -3,6 +3,8 @@ from selenium.common.exceptions import NoAlertPresentException
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from .locators import BasePageLocators
+from .locators import ProductPageLocators
 import math
 import time
 
@@ -65,3 +67,26 @@ class BasePage():
         except TimeoutException:
             return False
         return True
+
+    # Реализовать метод для перехода в корзину
+    # Нажать кнопку перехода в карзину 
+    def view_basket(self):
+        button_view_to_basket = self.browser.find_element(*BasePageLocators.BUTTON_VIEW_TO_BASKET)
+        button_view_to_basket.click()
+    
+        
+    
+    def go_to_basket(self):
+        # Нажимаем кнопку Add to basket 
+        button_add_to_basket = self.browser.find_element(*ProductPageLocators.BUTTON_ADD_TO_BASKET)
+        button_add_to_basket.click()
+
+
+class BasePageLocators():
+
+    def go_to_login_page(self):
+        link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
+        link.click()
+
+    def should_be_login_link(self):
+        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
